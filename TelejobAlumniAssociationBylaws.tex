@@ -1,0 +1,408 @@
+\documentclass[10pt]{article}
+\usepackage{graphicx}  
+\usepackage{multirow}
+\usepackage{calc}
+\usepackage[german]{babel} 
+\usepackage[utf8]{inputenc}
+\reversemarginpar
+\usepackage[paper=letterpaper,
+            %includefoot, % Uncomment to put page number above margin
+            marginparwidth=1.2in,     % Length of section titles
+            marginparsep=.05in,       % Space between titles and text
+            margin=0.8in,               % 1 inch margins
+            includemp]{geometry}
+
+\setlength{\parindent}{0in}
+
+\usepackage[shortlabels]{enumitem}
+
+\newcounter{qcounter}
+
+\makeatletter
+\newlength{\bibhang}
+\setlength{\bibhang}{1em}
+\newlength{\bibsep}
+ {\@listi \global\bibsep\itemsep \global\advance\bibsep by\parsep}
+\newlist{bibsection}{itemize}{3}
+\setlist[bibsection]{label=,leftmargin=\bibhang,%
+        itemindent=-\bibhang,
+        itemsep=\bibsep,parsep=\z@,partopsep=0pt,
+        topsep=0pt}
+\newlist{bibenum}{enumerate}{3}
+\setlist[bibenum]{label=[\arabic*],resume,leftmargin={\bibhang+\widthof{[999]}},%
+        itemindent=-\bibhang,
+        itemsep=\bibsep,parsep=\z@,partopsep=0pt,
+        topsep=0pt}
+\let\oldendbibenum\endbibenum
+\def\endbibenum{\oldendbibenum\vspace{-.6\baselineskip}}
+\let\oldendbibsection\endbibsection
+\def\endbibsection{\oldendbibsection\vspace{-.6\baselineskip}}
+\makeatother
+
+
+\usepackage{fancyhdr,lastpage}
+\pagestyle{fancy}
+%\pagestyle{empty}      % Uncomment this to get rid of page numbers
+\fancyhf{}\renewcommand{\headrulewidth}{0pt}
+\fancyfootoffset{\marginparsep+\marginparwidth}
+\newlength{\footpageshift}
+\setlength{\footpageshift}
+          {0.5\textwidth+0.5\marginparsep+0.5\marginparwidth-2in}
+\lfoot{\hspace{\footpageshift}%
+       \parbox{4in}{\, \hfill %
+                    \arabic{page} of \protect\pageref*{LastPage} % +LP
+%                    \arabic{page}                               % -LP
+                    \hfill \,}}
+
+\usepackage{color,hyperref}
+\definecolor{darkblue}{rgb}{0.0,0.0,0.3}
+\hypersetup{colorlinks,breaklinks,
+            linkcolor=darkblue,urlcolor=darkblue,
+            anchorcolor=darkblue,citecolor=darkblue}
+
+\newcommand{\makeheading}[2][]%
+        {\hspace*{-\marginparsep minus \marginparwidth}%
+         \begin{minipage}[t]{\textwidth+\marginparwidth+\marginparsep}%
+             {\large \bfseries #2 \hfill #1}\\[-0.15\baselineskip]%
+                 \rule{\columnwidth}{1pt}%
+         \end{minipage}}
+
+\renewcommand{\section}[1]{\pagebreak[3]%
+    \vspace{1.3\baselineskip}%
+    \phantomsection\addcontentsline{toc}{section}{#1}%
+    \noindent\llap{\scshape\smash{\parbox[t]{\marginparwidth}{\hyphenpenalty=10000\raggedright #1}}}%
+    \vspace{-\baselineskip}\par}
+
+
+
+\newcommand{\blankline}{\quad\pagebreak[3]}
+\newcommand{\halfblankline}{\quad\vspace{-0.5\baselineskip}\pagebreak[3]}
+
+
+\newcommand\doilink[1]{\href{http://dx.doi.org/#1}{#1}}
+\newcommand\doi[1]{doi:\doilink{#1}}
+
+
+\providecommand*\url[1]{\href{#1}{#1}}
+
+\renewcommand*\url[1]{\href{#1}{\texttt{#1}}}
+
+
+\providecommand*\email[1]{\href{mailto:#1}{#1}}
+
+\providecommand\BibTeX{{B\kern-.05em{\sc i\kern-.025em b}\kern-.08em
+    \TeX}}
+\providecommand\Matlab{\textsc{Matlab}}
+\hyphenation{bio-mim-ic-ry bio-in-spi-ra-tion re-us-a-ble pro-vid-er}
+
+%%%%%%%%%%%%%%%%%%%%%%%% End Helper Commands %%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%% Begin Bylaws Document %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+\makeheading{Telejob Gesch"aftsordnung {\it [Telejob Rules of Procedure]}\\\\
+\small{Nur die deutsche Fassung ist rechtlich bindend. Weibliche und m"annliche Bezeichnungen werden im Folgenden synonym verwendet. \\ {\it[Only the German version is legally binding. Female and male denominations are used interchangeably.]}}\\\\
+\small{Genehmigt durch das Telejob Executive Meeting am 13.Dezember 2018}\\
+\small{{\it [Approved by the Telejob Executive Meeting on December 13th, 2018]}}
+}
+
+
+
+\vspace{30pt}
+\begin{list}{{\bf Artikel \arabic{qcounter}:~}}{\usecounter{qcounter}}
+
+\item[] \hspace{-30pt}\section {Grunds"atze\\ {\it[Fundamentals]}}
+\vspace {-23pt}
+
+\item {\bf Ziel des Dokuments {\it[Purpose of the Document]}}\\
+Telejob (die Organisation) ist eine auf Freiwilligenarbeit basierende gemeinn"utzige Organisation, betrieben von der Akademischen Vereinigung des Mittelbaus der ETH Z"urich (AVETH). Diese Rules of Procedure (RoP) – Gesch"aftsordnung – regeln die Tätigkeiten von Telejob (der Organisation). Sie legen die Kompetenzen und Pflichten der Mitglieder fest. Die Rules of Procedure dürfen nicht im Widerspruch zur Satzung von AVETH stehen.\\
+{\it[Telejob (the Organization) is a voluntary based non-profit organization operated by the Academic Association of Scientific Staff at ETH Zurich (AVETH). These Rules of Procedures (ROP) regulate the activities of Telejob (the Organization). They define the competences and duties of its members. The Rules of Procedure may not be in contradiction to the AVETH bylaws.]}
+
+
+\item {\bf Ort und bisheriges Bestehen {\it[Location and Duration]}}\\
+Der Hauptsitz der Organisation befindet sich in der Sonneggstrasse 33, 8092 Z"urich, Schweiz. Die Organisation wurde 1989 gegr"undet.\\
+{\it[The Organization's headquarters are located in Sonneggstrasse 33, 8092 Zurich, Switzerland. The Organization was founded in 1989.]}
+
+\item {\bf Ziel {\it [Purpose]}}\\
+$^{1}$Die Organisation dient zur Unterst"utzung der Mitglieder der akademischen Gemeinschaft der ETH bei der Suche nach Arbeitspl"atzen. Zu der Gemeinschaft geh"oren alle aktuellen und fr"uheren Studierenden und wissenschaftlichen Mitarbeiter aus dem Bereich der ETH.\\ 
+$^{2}$Die Organisation f"ordert eine Kultur von Unternehmergeist, freiwilliger Gesch"aftst"atigkeit und fachlicher Exzellenz innerhalb der akademischen Gemeinschaft der ETH.\\
+$^{3}$Die Organisation strebt nach der Gewinnung von Mitgliedern, die sich f"ur freiwillige unternehmerische Aktivit"aten interessieren, und der F"orderung ihrer Entwicklung, indem sie eine gemeinsame Plattform bereitstellt, in deren Fokus die Nutzung neuer Technologien und die Mitgliederausbildung stehen.\\
+{\it[$^{1}$The Organization serves the purpose of supporting ETH's academic community members in their search for employment. This includes all current and former students and scientific staff from the ETH domain.\\ 
+$^{2}$The Organization fosters the culture of entrepreneurship, voluntary business activity and technical excellence within ETH's academic community.\\
+$^{3}$The Organization seeks to attract and develop members interested in voluntary business activities by providing a corporate platform focusing on utilizing novel technologies and member education.]}
+
+\item {\bf Ressourcen {\it[Resources]}}\\
+Die Ressourcen der Organisation stammen aus dem Ertrag von unternehmerischen T"atigkeiten, finanzieller F"orderung und Erbschaften sowie "offentlichen Zusch"ussen.\\
+{\it[The Organization's resources are derived from revenues of business activities, sponsorship, donations and legacies and public subsidies.]}
+
+\newpage
+\item[] \hspace{-30pt}\section {Mitgliedschaft\\{\it[Membership]}}
+\vspace {-23pt}
+
+\item {\bf Grundvoraussetzung {\it[Prerequisite]}}\label{prerequisite}\\
+Organisationsmitglied kann jeder werden, der Engagement f"ur die Ziele der Organisation durch seinen Einsatz oder sein Handeln bewiesen hat. Von Vorteil (aber keine Bedingung) ist, wenn die Person Studierende/r an einer Hochschule in der Schweiz war oder derzeit ist.\\
+{\it[Any person may become a member of the Organization after demonstrating dedication to the goals of the Organization through their commitments or actions. It is preferred (but not required) that the person was or currently is a student of a higher-education institution in Switzerland.]}
+
+\item {\bf Erhalt der Mitgliedschaft {\it[Obtaining Membership]}}\\
+Um Mitglied der Organisation zu werden, muss man zun"achst die Grundvoraussetzung von \hyperref[prerequisite]{Artikel~\ref{prerequisite}} erf"ullen und schriftlich seine Absicht erkl"aren, Organisationsmitglied zu werden. Das Executive Meeting (\hyperref[EM]{Artikel~\ref{EM}}) – die Vorstandssitzung – entscheidet dann zusammen mit der Erteilung von Stimmrechten "uber die Mitgliedschaft. Beide gelten sofort nach der Genehmigung.\\
+{\it[To become a member of the Organization, one must first fulfill the prerequisite in \hyperref[prerequisite]{Article~\ref{prerequisite}} and declare a written intention of becoming an Organization member. The Executive Meeting (\hyperref[EM]{Article~\ref{EM}}) then decides on the membership together with the delegation of voting rights. Both are intact immediately after the approval du.]}
+
+
+\item {\bf Ende der Mitgliedschaft {\it[Cessation of Membership]}}\\ \label{cessation}
+Die Mitgliedschaft endet\\
+$^{1}$durch eine schriftl. K"undigung beim Executive Board (\hyperref[EB]{Artikel~\ref{EB}}), die sofort g"ultig ist;\\
+$^{2}$durch Anordnung des Ausschlusses durch das Executive Board mindestens 14 Tage vor dem n"achsten Executive Meeting, bei dem die Beendigung nur durch einen EM-Beschluss vollst"andig wird;\\
+{\it[The membership ceases\\ 
+$^{1}$by a written resignation to the Executive Board (\hyperref[EB]{Article~\ref{EB}}), effective immediately;\\
+$^{2}$by an exclusion order from the Executive Board at least 14 days before the next Executive Meeting, in which the cessation can only become intact through an EM decision;]}
+
+\item {\bf Rechte und Pflichten der Mitglieder {\it[Rights and Duties of Members]}}\label{Duties}\\
+$^{1}$Alle Mitglieder haben das Recht, bei EM-Wahlen und in Anträgen ihre Meinung zu "au"sern. \\
+$^{2}$Jedes Mitglied hat das Recht, Antr"age beim EM einzureichen. Antr"age zur "Anderung der RoP m"ussen mindestens 7 Tage vor und zwar nur vor dem ersten EM nach einer AVETH General Assembly (\hyperref[GA]{Artikel~\ref{GA}}) eingereicht werden.\\
+$^{3}$Mitglieder haben das Recht, ein au"serordentliches EM zu fordern. Dieser Antrag muss von mindestens 25 Prozent der aktiven Mitglieder (aufgerundet) unterst"utzt werden. Dieses EM muss vom Executive Board binnen 14 Tagen organisiert werden.\\
+$^{4}$Zugriff auf die Ressourcen k"onnen die Mitglieder durch Genehmigung des EB und eine schriftliche
+Vereinbarung der Verantwortlichkeit erhalten. "Ubliche Ressourcen sind der Zugriff auf vertrauliche Daten sowie Finanzkompetenz.\\
+{\it[$^{1}$All members have the right to express their opinions in EM elections and petitions.\\
+$^{2}$Every member has the right to submit petitions at the EM. Petitions to change the ROP have to be submitted at least 7 days prior and only to the first EM after an AVETH General Assembly (\hyperref[GA]{Article~\ref{GA}}).\\
+$^{3}$Members have the right to call for an extraordinary EM. The request must be supported by a minimum of 25 percent of the active members, rounded up. This EM has to be organized by the Executive Board within 14 days.\\
+$^{4}$Members can have access to ressources through the agreement of the EB and a written agreement of responsibility. Typical ressources are access to confidential data as well as financial competence.]}
+
+\item {\bf Das Gebot der Freiwilligenarbeit {\it[The imperative of volunteering work]}}\\
+$^{1}$Mitglieder der Organisation arbeiten grunds"atzlich auf ehrenamtlicher Basis und k"onnen daher nur tats"achlich entstandene Ausgaben und Reisekosten erstattet bekommen. M"ogliche Sitzungsgelder d"urfen nicht die f"ur offizielle Kommissionen gezahlten Gelder "ubersteigen. F"ur eindeutig "uber die "ublichen Amtsaufgaben hinausgehende außerordentliche T"atigkeiten hat jedes Mitglied des Komitees das Recht auf angemessene Entsch"adigung mit Genehmigung durch das Executive Board. 
+\\
+$^{2}$Bezahlte Mitarbeiter sind nicht bef"ahigt, eine Position im Executive Board zu "ubernehmen, unter Ausschluss der betroffenen Beteiligten.\\
+$^{3}$In seltenen Ausnahmen k"onnen bezahlte Mitarbeiter Mitglieder der Organisation sein.\\
+{\it[$^{1}$Principally, members of the Organization work on a voluntary basis and as such can only be reimbursed for their actual expenses and travel costs. Potential attendance fees cannot exceed those paid for official commissions. For clear extraordinate activities beyond the usual function, each Committee member is eligible for appropriate compensation, approved by the Executive Board. 
+\\
+$^{2}$Paid employees are not eligible for a position in the Executive Board, excluding the party concerned.\\
+$^{3}$As rare exceptions, paid employees can be members of the Organization.]}
+
+\item[] \hspace{-30pt}\section {Organisation}
+\vspace {-23pt}
+
+\item {\bf Liste der Organe {\it[List of Organs]}}\\\label{ListOfOrgans}
+Die Organisationb esteht aus folgenden Organen:
+$^{1}$ Die AVETH Generalversammlung und der AVETH Vorstand\\
+$^{2}$ Das Executive Meeting (EM) - die Vorstandssitzung\\
+$^{3}$ Das Executive Board (EB) - der Vorstand\\
+$^{4}$ Das Advisory Board (AB) - der Beirat\\
+$^{5}$ Die Corporate Revision (R) - Die Unternehmunspr"ufung\\ 
+{\it[The Organization consists of the following organs:\\
+$^{1}$ The AVETH General Assembly (GA) and the AVETH Board\\
+$^{2}$ The Executive Meeting (EM)\\
+$^{3}$ The Executive Board (EB)\\
+$^{4}$ The Advisory Board (AB)\\
+$^{5}$ The Corporate Revision (R)]}
+
+\item {\bf Gesch"aftsjahr {\it[Fiscal Year]}}\\
+Das Gesch"aftsjahr der Organisation entspricht dem Kalenderjahr, d. h. 1. Januar bis 31. Dezember, entsprechend der Satzung von AVETH.\\
+{\it[The Organization's fiscal year coincides with the calendary year, i.e. January 1$^{\mathrm{st}}$ to December 31$^{\mathrm{st}}$, according to the AVETH bylaws.]}
+
+\item[] \hspace{-30pt}\section {Verh"altnis zum AVETH \\{\it [Relation to AVETH]}}
+\vspace {-23pt}
+
+\item {\bf AVETH Generalversammlung (GA) {\it[AVETH General Assembly (GA)]}}\label{GA}\\
+Die GA ist die h"ochste Instanz der Organisation. Sie setzt sich aus allen AVETH Mitgliedern zusammen und tagt mindestens einmal im Gesch"aftsjahr. Die GA w"ahlt die Pr"asidenschaft, die Qu"astur und andere Mitglieder des Executive Boards. Einmal im Jahr berichtet die Organisation "uber ihre T"atigkeiten und Finanzergebnisse, nominiert Kandidaten ihres Executive Boards und stellt Antr"age.\\
+{\it[The GA is the Organization's supreme authority. It is composed of all AVETH members and takes place at least once per fiscal year. The GA elects the Organization's Presidency, Treasury and other members of the Executive Board. Once per year, the Organization reports its activities and financial results, nominates candidates of its Executive Board and files petitions.]}
+ 
+\item {\bf AVETH Vorstand {\it[AVETH Board]}}\\
+Das Executive Board der Organisation muss das AVETH Board regelm"a"sig über das Gesch"aft und seinen Betrieb informieren. Das AVETH Board hat das Recht, die Finanzen der Organisation jederzeit zu pr"ufen.
+{\it[The Organizations Executive Board must periodically inform the AVETH Board of the business and its operation. The AVETH board has right to inspection of the finances of the Organization, at any time.]}
+
+\newpage
+\item[] \hspace{-30pt}\section {Executive Meeting (EM)}
+\vspace {-23pt}
+
+\item {\bf Zweck und Kompetenzen des Executive Meetings {\it[Purpose and Competences of the Executive Meeting]}}\label{EM}\\
+Das Executive Meeting (EM) dient zur Bildung von Meinungen und Beschl"ussen in Absprache mit s"amtlichen Organisationsorganen. Es setzt sich aus allen Organen der Organisation zusammen. "Ubliche Kompetenzen des Executive Meetings sind die
+$^{1}$Ernennung und Entlassung von Organisationsmitgliedern;\\
+$^{2}$Beaufsichtigung von Aktivit"aten innerhalb der Organisation;\\
+$^{3}$"Anderung der Gesch"aftsordnung RoP;\\
+$^{4}$Beschluss "uber offizielle Berichte und die Nominierung von Kandidaten;\\
+$^{5}$Beschluss "uber von der Organisation bei der AVETH General Assembly vorgebrachte Antr"age;\\
+{\it[The Executive Meeting (EM) has the purpose to form opinions and decisions with the consultation of all organs of the Organization. It is composed of all organs of the Organization. Typical competences of the Executive Meeting are\\
+$^{1}$appointments and dismissals of members of the Organization;\\
+$^{2}$supervision of activities within the Organization;\\
+$^{3}$amendment of the RoP;\\
+$^{4}$decision on official reports and candidate nominations;\\
+$^{5}$decision on petitions the Organization presents at the AVETH General Assembly;]}
+
+\item {\bf Grundlagen {\it[Basics]}}\\
+$^{1}$Die Organisation hat standardm"a"sig, aber nicht zwingenderweise, ein EM pro Monat.\\
+$^{2}$Das EM muss mindestens 7 Tage im Voraus zumindest gegen"uber allen Organisationsorganen angek"undigt werden (Artikel 10). "Anderungsantr"age zu den RoP m"ussen in dieser Ank"undigung enthalten sein und k"onnen erst im ersten EM nach einer AVETH GA behandelt werden.\\
+$^{3}$Das EM wird vom Vorsitz geleitet.\\
+$^{4}$Auf einen Verfahrensantrag hin kann die Leitung des EM für einzelne Tagesordnungspunkte oder das gesamte EM einer anderen Person "ubertragen werden.\\
+$^{5}$Einzelpersonen außerhalb der Organisationsorgane k"onnen am EM nur mit Genehmigung des EM teilnehmen.\\
+{\it[$^{1}$The Organization holds by default, but not necessarily, one EM each month.\\
+$^{2}$The EM has to be announced at least 7 days in advance towards at least all organs of the Organization (\hyperref[ListOfOrgans]{Article~\ref{ListOfOrgans}}). Amendment proposals of the RoP must be included in this announcement can only be addressed in the first EM after an AVETH GA.\\
+$^{3}$The EM is chaired by the Presidency.\\
+$^{4}$Upon procedural request, the chair of the EM for individual agenda points or for the whole EM may be transferred to a different person.\\
+$^{5}$Individuals outside the Organizations organs can only attend the EM after the EM's approval.]}
+
+\item {\bf G"ultigkeit {\it[Validity]}}\\
+Das EM ist als geltend anzusehen, wenn\\
+$^{1}$mindestens die H"alfte des EB (abgerundet) teilnimmt, darunter mindestens ein Mitglied des Vorsitzes. Die Teilnahme kann physisch oder virtuell erfolgen.\\
+$^{2}$ein Protokoll über das Meeting erstellt und vom Executive Meeting genehmigt wird;\\
+{\it [The EM shall be considered valid with\\
+$^{1}$at least half of the EB (rounded down) participating, including at least one member of the Presidency. The participation can be physical or virtual. \\
+$^{2}$a meeting protocol approved by the Executive Meeting;]}
+
+\item {\bf Beschlussverfahren {\it[Decision Procedures]}}\label{EMDecisionProcedure}\\
+$^{1}$Ein Beschluss des EM erfolgt durch einfache Mehrheitsabstimmung der anwesenden EB-Mitglieder. Stimmrechte können auf reguläre Telejob-Mitglieder übertragen werden. Im Falle einer Pattsituation ist die Stimme des Vorsitzes entscheidend. Falls der Vorsitz dann aus zwei Co-Vorsitzenden besteht, geht der Beschluss auf das AVETH Board über und schließlich auf die AVETH General Assembly.\\
+$^{2}$Beschlüsse zur Änderung der RoP müssen von einer Zwei-Drittel-Mehrheit der anwesenden EB-Mitglieder getragen werden.\\
+$^{3}$Abstimmungen erfolgen per Handzeichen. Die Abstimmung kann auf Antrag eines anwesenden EB-Mitglieds auch geheim per Stimmzettel durchgeführt werden.\\
+$^{4}$Das EB kann jedem Nicht-Mitglied des EB das Stimmrecht jederzeit durch
+Übereinstimmung einer qualifizierten Mehrheit entziehen.\\
+
+{\it[$^{1}$Decision of the EM shall be taken by a simple majority vote of the EB members present. Voting rights can be delegated to regular Telejob members. In case of a deadlock, the Presidency shall have the deciding vote. If then the Presidency consists of two Co-Presidents, the decision escalates to the AVETH Board and eventually the AVETH General Assembly.\\
+$^{2}$Decisions concerning the amendment of the RoP must be approved by a two-thirds majority of the EB members present.\\
+$^{3}$Votes are done by a show of hands. Voting can also take place by secret ballot, if an attending EB member requests it. \\
+$^{4}$The EB can withdraw the voting right of any non-EB member at any time through an agreement of supermajority.]}
+
+\item {\bf Vorgeschriebene Tagesordnungspunkt {\it[Mandatory Agenda Points]}}\\
+Die Tagesordnung des EM muss mindestens Folgendes enthalten:\\
+$^{1}$Genehmigung des Meeting-Protokolls des vorherigen EM;\\
+$^{2}$Einen von der EM-Leitung vorgestellten Tagesordnungsvorschlag, der vom EM genehmigt werden muss; \\
+$^{3}$Einen Bericht der Qu"astur zur aktuellen finanziellen Lage; bei Abwesenheit kann die Qu"astur durch die "Pr"asidentschaft vertreten werden;\\
+$^{4}$Einen Bericht des EB über monatliche Tätigkeiten;\\
+Zusätzlich zu den oben angeführten Tagesordnungspunkten können alle Themen und Diskussionen auf Antrag eines anwesenden Mitglieds vorgebracht werden. Die Leitung schlägt daraufhin die geänderte EM-Agenda vor, die vom EM zu genehmigen ist;\\
+{\it[The agenda of the EM must include at least:\\
+$^{1}$Approval of the meeting protocol of the previous EM;\\
+$^{2}$An agenda proposal presented by the EM chair, which is to be approved by the EM;\\
+$^{3}$A report of the Treasury on current financial status; In cases of absence, the Treasury can be substituted by the Presidency; \\
+$^{4}$A report of the EB on monthly activities;\\
+In addition to the agenda points mentioned above, all issues and discussions can be raised through a request from a member present. The chair then proposes the adapted EM agenda, which is to be approved by the EM;]}
+
+\item[] \hspace{-30pt}\section {Executive Board (EB)}
+\vspace {-23pt}
+
+\item {\bf Pflichten und Kompetenzen des Executive Boards {\it[Executive Board's Duties and Competences]}}\label{EB}\\
+$^{1}$Gemäß der Satzung von AVETH ist das Executive Board (EB) von der GA dazu berechtigt, alle Handlungen zu vollziehen, die den Zielen der Organisation dienen. Es verwaltet die alltäglichen Angelegenheiten der Organisation. Das EB entscheidet bei einem Meeting mit einfacher Mehrheit seiner Mitglieder.\\
+$^{2}$Das EB führt Finanztransaktionen im Rahmen des Budgets durch.\\ 
+$^{3}$Mit Genehmigung der Qu"astur kann das EB Organisationsmitgliedern, die nicht dem EB angehören, eine beschränkte finanzielle Kompetenz übertragen.\\
+$^{4}$Während des EM fällt das EB Beschlüsse auf der Grundlage einfacher Mehrheitsabstimmungen aller anwesenden
+Organisationsmitglieder.\\
+{\it[$^{1}$According to the AVETH bylaws, the Executive Board (EB) is authorized by the GA to carry out all acts that further the purposes of the Organization. It manages the Organiztion's day-to-day affairs. The EB decides with a simple majority of its members at a meeting.\\
+$^{2}$The EB makes financial transactions within the framework of the budget
+$^{3}$With the approval of ther Treasurer, the EB can delegate limited financial competence to non-EB members of the Organization.\\
+$^{4}$During the EM, the EB forms decisions based on simple majority votes of all attending members of the Organization.]}
+
+\item {\bf Mitglieder des Executive Boards {\it [Executive Board Members]}}\\
+Das Executive Board besteht aus Organisationsmitgliedern, die von der GA gewählt werden. Die offizielle Vertretung der Organisation wird durch das Executive Meeting in Form der folgenden Ämter gewählt:\\
+$^{1}$ Presidency (zwei Co-Pr"asidenten oder ein Pr"asident und ein stellvertretender Pr"asident) – die Pr"asidentschaft\\
+$^{2}$ Treasurer – die Qu"astur\\
+$^{3}$ Vice Presidency of Customer Relations (VP-CR) – Vizepräsident Kundenbeziehungen\\
+$^{4}$ Vice Presidency of Student Relations (VP-SR) – Vizepräsident Studierendenbeziehungen\\
+$^{5}$ Vice Presidency of Technology (VP-T) – Vizepräsident Technologie\\
+$^{6}$ Vice Presidency of Team Development (VP-TD) – Vizepräsident Teamentwicklung\\
+$^{7}$ Vice Presidency of Strategy (VP-S) – Vizepräsident Strategie\\
+$^{8}$ Vice Presidency of PolyHACK (PHD) – Vizepräsident PolyHACK\\
+$^{9}$ Vice Presidency of ETH Gethired (D-ETHGH) – Vizepräsident ETH Gethired\\
+$^{10}$ Vice Presidency of Polyclub (D-PC) – Vizepräsident Polyclub\\
+{\it[The Executive Board is composed of members of the Organization elected by the GA. The official recommendation of the Organization is elected by the Executive Meeting in the following competencies:\\
+$^{1}$ Presidency (two co-Presidents or a President and a Vice-President)\\
+$^{2}$ Treasurer\\
+$^{3}$ Vice Presidency of Customer Relations (VP-CR)\\
+$^{4}$ Vice Presidency of Student Relations (VP-SR)\\
+$^{5}$ Vice Presidency of Technology (VP-T)\\
+$^{6}$ Vice Presidency of Team Development (VP-TD)\\
+$^{7}$ Vice Presidency of Strategy (VP-S)\\
+$^{8}$ Vice Presidency of PolyHACK (PHD)\\
+$^{9}$ Vice Presidency of ETH Gethired (D-ETHGH)\\
+$^{10}$ Vice Presidency of Polyclub (D-PC)]}
+
+\item {\bf Die Pr"asidentschaft and die Qu"astur}\label{P&T}\\
+Gemäß der Statuten von AVETH sind die Mitglieder der Pr"asidentschaft und der Qu"astur automatisch Mitglieder des AVETH Boards, in dem sie Telejob vertreten. Die GA von AVETH wählt sowohl die Mitglieder der Pr"asidentschaft als auch den Qu"astor. Gemeinsam sind sie für die Tätigkeiten der Organisation verantwortlich.\\
+$^{1}$ Die Pr"asidentschaft und die Qu"astur können gemeinsam Rechtsgeschäfte unterzeichnen, die Telejob betreffen.\\
+$^{2}$ Der Vorsitz leitet das EM und vertritt die Organisation in allen Fällen, in denen keine anderen, eindeutig festgelegten, Vertretungen in den RoP oder durch das EB angegeben sind.\\
+$^{3}$ Der Vorsitz entwickelt die Strategie der Organisation und setzt sie um, damit diese nachhaltig ihren Zweck erfüllt.\\
+$^{4}$ Die Qu"astur verwaltet die Finanzen und informiert die Organisation über den Finanzbericht sowie das Budget.\\
+$^{5}$ Entsprechend der Satzung von AVETH gilt für die Pr"asidentschaft und die Qu"astur eine Amtszeit von einem Jahr, die verlängert werden kann.\\
+{\it[According to the AVETH bylaws, the members of the Presidency and the Treasurer are automatically members of the AVETH board, where they represent Telejob. The AVETH GA elects both the Presidency members and the Treasurer. Together, they are responsible for the activities of the Organization. \\
+$^{1}$The Presidency and the Treasurer together can sign legal transactions concerning Telejob.\\
+$^{2}$The Presidency leads the EM and represents the Organization in all cases where no other, clearly defined, representations are given in the RoP or by the EB. \\
+$^{3}$The Presidency develops and executes the Organization's strategy with the goal to fulfill its purpose sustainably.\\
+$^{4}$The Treasurer administers the finances and informs the Organization on the financial statement as well as the budget.\\
+$^{5}$According to the AVETH bylaws, the terms of the Presidency as well as the Treasurer shall last for one year and are renewable.]}
+
+\item {\bf Suspension von Pr"asidentschaft und Qu"astur {\it[Suspension of Presidency and Treasurer]}}\label{suspension}\\
+Gemäß der AVETH Statuten (Art. 15, Version 2018) können Pr"asidentschaft und Qu"astur während der regulären GA abgewählt werden. Werden die in \hyperref[P&T]{Artikel~\ref{P&T}} angegebenen Aufgaben von Vorsitz oder Schatzmeister nicht erfüllt, können AVETH Mitglieder innerhalb der Organisation eine außerordentliche GA beantragen, um diesen abzuwählen, wie in der AVETH Satzung erwähnt (Art. 10, Reguläre MV, Abs. 3 Außerordentliche MV, Version 2018).
+{\it[According to the AVETH bylaws (Art 15, version 2018), the Presidency or the Treasurer can be unelected during the ordinary GA. If the Presidency or the Treasurer do not fulfill the responsibilities mentioned in \hyperref[P&T]{Article~\ref{P&T}}, AVETH members within the Organization can request an extraordinary GA to unelect them, according to the AVETH bylaws (Art 10, Ordinary MV, Par 3 Extraordinary MV, version 2018).]}
+
+\item {\bf Unp"asslichkeit der Pr"asidentschaft {\it[Indisposition of the Presidency]}}\\
+Im Falle der Unpässlichkeit aller Mitglieder des Vorsitzes kann nach folgender Priorisierung eine zwischenzeitliche Vertretung bis zur nächsten GA eingesetzt werden:\\
+$^{1}$ Qu"astur der Organisation\\
+$^{2}$ Pr"asident von AVETH\\
+$^{3}$ Vizepr"asident von AVETH\\
+$^{4}$ Qu"astur von AVETH\\
+{\it[In the case of the indisposition of all members in the Presidency, an interim substitution until the next GA will be installed according to the following priorisation:\\
+$^{1}$ Treasury of the Organization\\
+$^{2}$ Presidency of AVETH\\
+$^{3}$ Vice Presidency of AVETH\\
+$^{4}$ Treasury of AVETH]}
+
+
+\item {\bf Vizepr"asidenten {\it[Vice Presidents]}}\\\label{VP&D}
+Vizepräsidenten sind für den nachhaltigen Erfolg eines festgelegten Bereichs innerhalb der Organisation zuständig. Zu dieser Zuständigkeit gehören:\\
+$^{1}$Die Finanzkompetenz für den jeweiligen Bereich einschließlich Budgetentwurf und Finanzbericht;\\
+$^{2}$Aktive politische Teilhabe durch Anwesenheit bei mindestens 7 EM pro Kalenderjahr;\\
+$^{3}$Führung von Teammitgliedern aus dem jeweiligen Bereich;\\
+{\it[Vice Presidents are responsible for the sustainable success of a defined ressort within the Organization. The responsibility includes:\\
+$^{1}$Financial competence for the respective ressort, including budget proposal and financial statement;\\ 
+$^{2}$Active political participation through attending at least 7 EMs per calendar year;\\
+$^{3}$Leading team members from the respective ressort;]}
+
+\item {\bf Suspension von Vizepr"asidenten {\it[Suspension of Vice Presidents]}}\\
+Nur sofern der Vizepräsident seine in \hyperref[VP&D]{Artikel~\ref{VP&D}} erwähnten Aufgaben eindeutig nicht erfüllt, kann das EB nach dem in \hyperref[suspension]{Artikel~\ref{suspension}} beschriebenen Verfahren einen Ausschluss anordnen.\\
+{\it[Only if the Vice President clearly does not fulfill the responsibilities mentioned in \hyperref[VP&D]{Article~\ref{VP&D}}, the EB can order an exclusion according to the procedure described in \hyperref[suspension]{Article~\ref{suspension}}.]}
+
+\newpage
+\item[] \hspace{-30pt}\section {Advisory Board (AB)}
+\vspace {-23pt}
+
+\item {\bf Zweck des Advisory Boards {\it[Purpose of the Advisory Board]}}\label{AB}\\
+Das AB hat gegenüber der Organisation eine beratende und überwachende Rolle. Durch die Erfahrung seiner Mitglieder soll das AB der Organisation dabei helfen, nachhaltig ihren Zweck zu erfüllen.\\
+{\it[The AB serves as a consulting and supervising role towards the Organization. Through the experience of its members, the AB should help the Organization fulfill its purpose sustainably.]}
+
+\item {\bf Zusammensetzung {\it [Composition]}}\\
+Die Organisation beantragt ein AB aus der Telejob Alumni Association.\\
+{\it[The Organization requests an AB from the Telejob Alumni Association.]}
+
+\item {\bf Pflichten und Kompetenzen des Advisory Boards {\it[Duties and Competences of the Advisory Board]}}\\
+$^{1}$ Das AB sorgt im Wesentlichen für das Wohlergehen der Organisation und dafür, dass deren Tätigkeiten auf den Zweck der Organisation ausgerichtet sind. Sie unterstützen das EB durch ihre Erfahrung und Netzwerke.\\
+$^{2}$ Das AB kann die Einberufung eines außerordentlichen EM durch das EB binnen 14 Tagen nach dem Aufruf vorschlagen.\\
+$^{3}$ AB-Mitglieder dürfen nicht Organisationsmitglieder sein. Organisationsmitglieder dürfen nicht AB-Mitglieder sein.\\
+$^{4}$ Durch einfache Mehrheitsvereinbarung kann das AB dem EB Diskussionspunkte vorschlagen, die spätestens beim nächsten EM behandelt werden können.\\
+$^{5}$ AB-Mitglieder erzielen in keinerlei Hinsicht finanziellen Profit aus den Tätigkeiten der Organisation.\\
+{\it[$^{1}$ The AB cares intrinsically for the well-being of the Organization and the alignment of its activities to its purpose. They assist the EB with their exprience and networks.\\
+$^{2}$ The AB can propose an extraordinary EM to be organized by the EB lastest 14 days after the call.\\
+$^{3}$ AB members can not be members of the Organization. Members of the Organization can not be AB members.\\
+$^{4}$ Through simple majority agreement, the AB can propose discussion points to the EB, which may be addressed latest at the next EM.\\
+$^{5}$ AB members do not take financial profits from the Organization's activities in any means.]}
+
+\item[] \hspace{-30pt}\section {Corporate Revision}
+\vspace {-23pt}
+
+\item {\bf Pr"ufer {\it[Auditors]}}\\
+Die Prüfung der Finanzen der Organisation erfolgt durch einen unabhängigen externen Prüfer.\\
+{\it[The finances of the Organization is audited by an independant external auditor.]}
+
+
+\item[] \hspace{-30pt}\section {Verschiedene Regelungen {\it[Various Provisions]}}
+\vspace {-23pt}
+
+\item {\bf Aufl"osung {\it[Dissolution]}}\\
+$^{1}$ Entsprechend der Satzung von AVETH kann die Organisation nur mit Zustimmung der GA aufgelöst werden.\\
+$^{2}$ Sollte die Organisation aufgelöst werden, so ist das verfügbare Kapital an eine gemeinnützige Instanz zu übertragen, die ähnliche Ziele des öffentlichen Interesses verfolgt wie diese Organisation. Die Entscheidung wird von und bei der GA gefällt, die die Organisation auflöst. Das Kapital darf keinesfalls an einzelne Mitglieder irgendeines Organisationsorgans zurückgezahlt werden, noch dürfen diese das Kapital ganz oder in Teilen zu ihrem eigenen Vorteil einsetzen.\\
+{\it[$^{1}$ According to the AVETH bylaws, the Organization can only be dissolved through the approval of the GA.\\
+$^{2}$ Should the Organization be dissolved, the available assets should be transferred to a non-profit activity pursuing public interest goals similar to those of the Organization. The choice is made by and at the GA that dissolves the Organization. Under no circumstances should the assets be returned to individual members of any organ of the Organization, nor should they use a part or a total of assets for their own benefit.]}
+
+\item {\bf Genehmigung und Einf"uhrung {\it[Approval and Implementation]}}\\
+Die letzte Änderung dieser RoP erfolgte am 13. Dezember 2018 durch das EM der Organisation. Die Änderungen treten mit sofortiger Wirkung in Kraft. Die erste Version der Rules of Procedure wurde am 13. Dezember 2018 während der Rules of Procedure Initiation Ceremony eingeführt.\\
+{\it[These Rules of Procedure were last changed by the EM of the Organization on December 13th, 2018. They take effect immediately. The first version of Rules of Procedure was implemented on December 13th, 2018 during the Rules of Procedure Initiation Ceremony.]}
+
+\end{list}
+
+
+  
+\end{document} 
